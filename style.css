@@ -670,6 +670,17 @@ h2::after {
     flex: 1 1 100%;
     max-width: none;
   }
+
+  .hero,
+  .project-detail {
+    padding-top: 8.5rem;
+  }
+
+  /* Para que al pulsar Inicio/Proyectos/etc. no queden tapados por el header */
+  main > section,
+  .site-footer {
+    scroll-margin-top: 7.5rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
