@@ -293,12 +293,6 @@ h2::after {
   transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
 
-.hero-cta:hover,
-.hero-cta:focus-visible {
-  background: var(--pop);
-  border-color: var(--pop);
-  color: var(--pop-text);
-}
 
 /* ---- Lista de contacto reutilizada en el hero ---- */
 .contact-list {
