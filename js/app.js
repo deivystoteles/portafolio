@@ -2,7 +2,7 @@
   let translations = {
     es: {
       "nav.inicio": "Inicio", "nav.proyectos": "Proyectos", "nav.educacion": "Educación", "nav.contacto": "Contacto",
-      "common.verDetalle": "Ver detalle", "common.volver": "Volver a proyectos", "common.rol": "Mi rol",
+      "common.verDetalle": "Ver detalle", "common.volver": "Volver a inicio", "common.rol": "Mi rol",
       "common.funcionalidades": "Funcionalidades clave", "common.capturas": "Capturas del sistema",
       "common.notaPrivado": "Código fuente privado por acuerdo de confidencialidad con el cliente.",
       "common.cerrar": "Cerrar", "common.anterior": "Anterior", "common.siguiente": "Siguiente",
@@ -13,7 +13,7 @@
       "home.metaDesc": "Portafolio de Deivy Torres, arquitecto de software.",
       "home.status": "Disponible para nuevos proyectos", "home.rol": "Ingeniero en sistemas",
       "home.desc": "¿Tu negocio necesita automatizar procesos o digitalizarse? Te diseño una solución a tu medida, pensada para ahorrarte tiempo y dinero, y para ayudarte a ganar clientes.",
-      "home.cta": "Ver proyectos",
+      "home.cta": "Enlaces",
       "home.edureg.desc": "Sistema de gestión escolar con matrículas, pagos por cuotas y control financiero por dashboard.",
       "home.secondbrain.desc": "Gestor personal de conocimiento con notas en Markdown, temas y analítica de productividad.",
       "home.plangym.desc": "Sistema de gestión de membresías para gimnasios con control de socios, pagos y asistencia por QR.",
