@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="icon" type="image/png" href="../img/icon.png">
+  <script>
+    (function () {
+      if (localStorage.getItem('site-theme') === 'light') document.documentElement.setAttribute('data-theme', 'light');
+      document.documentElement.setAttribute('lang', localStorage.getItem('site-lang') || 'es');
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SecondBrain | Deivy Torres</title>
+  <meta name="description" content="Gestor personal de conocimiento de escritorio." data-i18n="secondbrain.metaDesc" data-i18n-attr="content">
+
+  <link rel="preload" href="../fonts/Play-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="../fonts/Play-Bold.ttf" as="font" type="font/ttf" crossorigin>
+
+  <link rel="stylesheet" href="../flaticon-uicons/brands/all.css">
+  <link rel="stylesheet" href="../flaticon-uicons/regular/rounded.css">
+  <link rel="preload" href="../flaticon-uicons/uicons-regular-rounded-J3WOUERV.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../flaticon-uicons/uicons-brands-XJPKRNBN.woff2" as="font" type="font/woff2" crossorigin>
+  
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav aria-label="Navegación principal">
+      <ul class="nav-config">
+        <li><a href="#" id="theme-toggle" aria-label="Cambiar tema de color" data-i18n="common.temaAria" data-i18n-attr="aria-label"><i class="fi fi-rr-moon"></i></a></li>
+        <li><a href="#" id="lang-toggle" aria-label="Cambiar idioma" data-i18n="common.idiomaAria" data-i18n-attr="aria-label"><i class="fi fi-rr-globe"></i></a></li>
+        <li class="lang-code" aria-hidden="true">ES</li>
+      </ul>
+      <ul class="nav-list">
+        <li><a href="../index.html" data-i18n="nav.inicio">Inicio</a></li>
+        <li><a href="../index.html#proyectos" data-i18n="nav.proyectos">Proyectos</a></li>
+        <li><a href="../index.html#educacion" data-i18n="nav.educacion">Educación</a></li>
+        <li><a href="../index.html#contacto" data-i18n="nav.contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="project-detail">
+      <a href="../index.html#proyectos" class="back-link">
+        <i class="fi fi-rr-arrow-small-left" aria-hidden="true"></i>
+        <span data-i18n="common.volver">Volver a proyectos</span>
+      </a>
+
+      <div class="project-detail-header">
+        <h1>SecondBrain</h1>
+        <ul class="project-stack">
+          <li>Python</li>
+          <li>Tkinter</li>
+          <li>SQLAlchemy</li>
+          <li>SQLite</li>
+        </ul>
+      </div>
+
+      <p class="project-detail-summary" data-i18n="secondbrain.summary">
+        Aplicación de escritorio para capturar notas, ideas e imágenes, organizarlas por temas y analizar el propio proceso de trabajo con métricas de productividad.
+      </p>
+
+      <div class="project-detail-body">
+        <h2 data-i18n="common.rol">Mi rol</h2>
+        <p data-i18n="secondbrain.role">Desarrollador full stack del proyecto (backend y frontend). Diseñé la arquitectura en capas del backend, el modelo de datos y los casos de uso, además de la interfaz de escritorio y la comunicación entre módulos.</p>
+
+        <h2 data-i18n="common.funcionalidades">Funcionalidades clave</h2>
+        <ul class="feature-list">
+          <li data-i18n="secondbrain.f1">Editor de notas en Markdown con vista previa en tiempo real, para capturar ideas sin perder el formato.</li>
+          <li data-i18n="secondbrain.f2">Cronómetro integrado por nota que mide el tiempo dedicado a cada idea o investigación.</li>
+          <li data-i18n="secondbrain.f3">Organización del conocimiento por temas y categorías, agrupando notas e imágenes de forma jerárquica.</li>
+          <li data-i18n="secondbrain.f4">Panel de analítica personal con métricas de productividad: tiempo invertido, palabras escritas, sesiones de trabajo y diversidad léxica.</li>
+          <li data-i18n="secondbrain.f5">Arquitectura en capas (Clean Architecture) con comunicación por eventos entre módulos, pensada para mantener el sistema fácil de escalar y modificar.</li>
+        </ul>
+      </div>
+
+      <div class="project-detail-links">
+        <a href="https://github.com/deivystoteles/second-brain-core" target="_blank" rel="noopener" data-i18n="common.verCodigo">Ver código en GitHub →</a>
+      </div>
+    </section>
+  </main>
+
+    <footer class="site-footer" id="contacto">
+      <div class="footer-content">
+        <h2 data-i18n="nav.contacto">Contacto</h2>
+
+        <ul class="footer-list">
+          <li class="footer-item">
+            <a href="https://linkedin.com/in/deitorres" target="_blank" rel="noopener">
+              <i class="fi fi-brands-linkedin" aria-hidden="true"></i>
+              <span class="footer-item-label">LinkedIn</span>
+            </a>
+          </li>
+
+          <li class="footer-item">
+            <a href="mailto:deivyjth@gmail.com">
+              <i class="fi fi-rr-envelope" aria-hidden="true"></i>
+              <span class="footer-item-label">Gmail</span>
+            </a>
+          </li>
+
+          <li class="footer-item">
+            <a href="#" class="copy-discord" data-copy="dei_0_0">
+              <i class="fi fi-brands-discord" aria-hidden="true"></i>
+              <span class="footer-item-label">Discord</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+<script src="../js/app.js"></script>
+<script>
+  document.querySelectorAll('.copy-discord').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      const texto = this.dataset.copy;
+      navigator.clipboard.writeText(texto).then(() => {
+        this.classList.add('copiado');
+        setTimeout(() => {
+          this.classList.remove('copiado');
+        }, 1500);
+      }).catch(err => {
+        console.error('No se pudo copiar: ', err);
+      });
+    });
+  });
+</script>
+</body>
+</html>

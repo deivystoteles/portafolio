@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="icon" type="image/png" href="../img/icon.png">
+  <script>
+    (function () {
+      if (localStorage.getItem('site-theme') === 'light') document.documentElement.setAttribute('data-theme', 'light');
+      document.documentElement.setAttribute('lang', localStorage.getItem('site-lang') || 'es');
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Helpdeskx | Deivy Torres</title>
+  <meta name="description" content="Plataforma de tickets de soporte técnico." data-i18n="helpdesk.metaDesc" data-i18n-attr="content">
+
+  <link rel="preload" href="../fonts/Play-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="../fonts/Play-Bold.ttf" as="font" type="font/ttf" crossorigin>
+
+  <link rel="stylesheet" href="../flaticon-uicons/brands/all.css">
+  <link rel="stylesheet" href="../flaticon-uicons/regular/rounded.css">
+  <link rel="preload" href="../flaticon-uicons/uicons-regular-rounded-J3WOUERV.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../flaticon-uicons/uicons-brands-XJPKRNBN.woff2" as="font" type="font/woff2" crossorigin>
+  
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav aria-label="Navegación principal">
+      <ul class="nav-config">
+        <li><a href="#" id="theme-toggle" aria-label="Cambiar tema de color" data-i18n="common.temaAria" data-i18n-attr="aria-label"><i class="fi fi-rr-moon"></i></a></li>
+        <li><a href="#" id="lang-toggle" aria-label="Cambiar idioma" data-i18n="common.idiomaAria" data-i18n-attr="aria-label"><i class="fi fi-rr-globe"></i></a></li>
+        <li class="lang-code" aria-hidden="true">ES</li>
+      </ul>
+      <ul class="nav-list">
+        <li><a href="../index.html" data-i18n="nav.inicio">Inicio</a></li>
+        <li><a href="../index.html#proyectos" data-i18n="nav.proyectos">Proyectos</a></li>
+        <li><a href="../index.html#educacion" data-i18n="nav.educacion">Educación</a></li>
+        <li><a href="../index.html#contacto" data-i18n="nav.contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="project-detail">
+      <a href="../index.html#proyectos" class="back-link">
+        <i class="fi fi-rr-arrow-small-left" aria-hidden="true"></i>
+        <span data-i18n="common.volver">Volver a proyectos</span>
+      </a>
+
+      <div class="project-detail-header">
+        <h1>Helpdeskx</h1>
+        <ul class="project-stack">
+          <li>PHP</li>
+          <li>MySQL</li>
+          <li>Bootstrap</li>
+          <li>SweetAlert</li>
+          <li>DataTables</li>
+        </ul>
+      </div>
+
+      <p class="project-detail-summary" data-i18n="helpdesk.summary">
+        Plataforma web de tickets de soporte técnico e incidencias, con roles diferenciados para solicitantes, técnicos, supervisores y administradores.
+      </p>
+
+      <div class="project-detail-body">
+        <h2 data-i18n="common.rol">Mi rol</h2>
+        <p data-i18n="helpdesk.role">Desarrollador full stack del proyecto (backend y frontend). Diseñé la arquitectura MVC en PHP, el modelo de datos en MySQL y las reglas de permisos, ciclo de vida de tickets y reportes.</p>
+
+        <h2 data-i18n="common.funcionalidades">Funcionalidades clave</h2>
+        <ul class="feature-list">
+          <li data-i18n="helpdesk.f1">Control de acceso por 4 roles (superadmin, supervisor, técnico, solicitante), cada uno con permisos y vistas propias.</li>
+          <li data-i18n="helpdesk.f2">Bandeja de tickets con visibilidad según rol: cada usuario ve solo lo que le corresponde crear, atender o supervisar.</li>
+          <li data-i18n="helpdesk.f3">Ciclo de vida de tickets controlado (abierto → en proceso → cerrado), sin permitir retrocesos ni saltos de estado.</li>
+          <li data-i18n="helpdesk.f4">Comentarios públicos e internos, con reglas distintas de visibilidad para solicitantes y técnicos.</li>
+          <li data-i18n="helpdesk.f5">Asignación de técnicos con reglas de negocio para evitar reasignar un ticket ya atendido.</li>
+          <li data-i18n="helpdesk.f6">Gestión de usuarios, áreas y categorías con eliminación lógica y restauración de registros.</li>
+          <li data-i18n="helpdesk.f7">Dashboard y reportes con métricas de tiempos de atención, filtrables por técnico, categoría y periodo.</li>
+        </ul>
+      </div>
+
+      <div class="project-detail-gallery">
+        <h2 data-i18n="common.capturas">Capturas del sistema</h2>
+        <ul class="gallery-grid">
+          <li><img src="../img/helpdesk-1.JPG" alt="Dashboard de Helpdeskx con métricas de tickets" loading="lazy"></li>
+          <li><img src="../img/helpdesk-2.JPG" alt="Bandeja de tickets con filtros" loading="lazy"></li>
+          <li><img src="../img/helpdesk-3.JPG" alt="Detalle de ticket con historial y comentarios" loading="lazy"></li>
+        </ul>
+        <p class="project-detail-note" data-i18n="common.notaPrivado">Código fuente privado por acuerdo de confidencialidad con el cliente.</p>
+      </div>
+
+      <!-- Popup / Lightbox -->
+      <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar" data-i18n="common.cerrar" data-i18n-attr="aria-label">&times;</button>
+        <button class="lightbox-arrow lightbox-prev" id="lightboxPrev" aria-label="Anterior" data-i18n="common.anterior" data-i18n-attr="aria-label">&#10094;</button>
+        <img src="" alt="" id="lightboxImg">
+        <button class="lightbox-arrow lightbox-next" id="lightboxNext" aria-label="Siguiente" data-i18n="common.siguiente" data-i18n-attr="aria-label">&#10095;</button>
+      </div>
+    </section>
+  </main>
+
+    <footer class="site-footer" id="contacto">
+      <div class="footer-content">
+        <h2 data-i18n="nav.contacto">Contacto</h2>
+
+        <ul class="footer-list">
+          <li class="footer-item">
+            <a href="https://linkedin.com/in/deitorres" target="_blank" rel="noopener">
+              <i class="fi fi-brands-linkedin" aria-hidden="true"></i>
+              <span class="footer-item-label">LinkedIn</span>
+            </a>
+          </li>
+
+          <li class="footer-item">
+            <a href="mailto:deivyjth@gmail.com">
+              <i class="fi fi-rr-envelope" aria-hidden="true"></i>
+              <span class="footer-item-label">Gmail</span>
+            </a>
+          </li>
+
+          <li class="footer-item">
+            <a href="#" class="copy-discord" data-copy="dei_0_0">
+              <i class="fi fi-brands-discord" aria-hidden="true"></i>
+              <span class="footer-item-label">Discord</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+<script src="../js/app.js"></script>
+<script>
+  document.querySelectorAll('.copy-discord').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      const texto = this.dataset.copy;
+      navigator.clipboard.writeText(texto).then(() => {
+        this.classList.add('copiado');
+        setTimeout(() => {
+          this.classList.remove('copiado');
+        }, 1500);
+      }).catch(err => {
+        console.error('No se pudo copiar: ', err);
+      });
+    });
+  });
+</script>
+
+  <script>
+    const galleryImgs = document.querySelectorAll('.gallery-grid img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxClose = document.getElementById('lightboxClose');
+    const lightboxPrev = document.getElementById('lightboxPrev');
+    const lightboxNext = document.getElementById('lightboxNext');
+
+    let currentIndex = 0;
+
+    function showImage(index) {
+      // que sea circular (de la última pasa a la primera y viceversa)
+      if (index < 0) index = galleryImgs.length - 1;
+      if (index >= galleryImgs.length) index = 0;
+
+      currentIndex = index;
+      lightboxImg.src = galleryImgs[currentIndex].src;
+      lightboxImg.alt = galleryImgs[currentIndex].alt;
+    }
+
+    galleryImgs.forEach((img, index) => {
+      img.addEventListener('click', () => {
+        showImage(index);
+        lightbox.classList.add('active');
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      lightboxImg.src = '';
+    }
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightboxPrev.addEventListener('click', () => showImage(currentIndex - 1));
+    lightboxNext.addEventListener('click', () => showImage(currentIndex + 1));
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('active')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
+      if (e.key === 'ArrowRight') showImage(currentIndex + 1);
+    });
+  </script>
+</body>
+</html>

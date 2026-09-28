@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="icon" type="image/png" href="img/icon.png">
+  <script>
+    (function () {
+      if (localStorage.getItem('site-theme') === 'light') document.documentElement.setAttribute('data-theme', 'light');
+      document.documentElement.setAttribute('lang', localStorage.getItem('site-lang') || 'es');
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="home.title">Deivy Torres | Ingeniero de sistemas</title>
+  <meta name="description" content="Portafolio de Deivy Torres, ingeniero de sistemas." data-i18n="home.metaDesc" data-i18n-attr="content">
+  
+  <link rel="preload" href="fonts/Play-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="fonts/Play-Bold.ttf" as="font" type="font/ttf" crossorigin>
+
+  <link rel="stylesheet" href="flaticon-uicons/brands/all.css">
+  <link rel="stylesheet" href="flaticon-uicons/regular/rounded.css">
+  <link rel="preload" href="flaticon-uicons/uicons-regular-rounded-J3WOUERV.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="flaticon-uicons/uicons-brands-XJPKRNBN.woff2" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+    <header class="site-header">
+      <nav aria-label="Navegación principal">
+          <ul class="nav-config">
+            <li><a href="#" id="theme-toggle" aria-label="Cambiar tema de color" data-i18n="common.temaAria" data-i18n-attr="aria-label"><i class="fi fi-rr-moon"></i></a></li>
+            <li><a href="#" id="lang-toggle" aria-label="Cambiar idioma" data-i18n="common.idiomaAria" data-i18n-attr="aria-label"><i class="fi fi-rr-globe"></i></a></li>
+            <li class="lang-code" aria-hidden="true">ES</li>
+          </ul>
+          <ul class="nav-list">
+              <li><a href="#inicio" data-i18n="nav.inicio">Inicio</a></li>
+              <li><a href="#proyectos" data-i18n="nav.proyectos">Proyectos</a></li>
+              <li><a href="#educacion" data-i18n="nav.educacion">Educación</a></li>
+              <li><a href="#contacto" data-i18n="nav.contacto">Contacto</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <main id="contenido">
+
+      <section id="inicio" class="hero" aria-labelledby="hero-titulo">
+        <div class="hero-label">
+          <h2 data-i18n="nav.inicio">Inicio</h2>
+        </div>
+
+        <div class="hero-content">
+          <p class="hero-status">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span data-i18n="home.status">Disponible para nuevos proyectos</span>
+          </p>
+
+          <h1 id="hero-titulo" class="hero-titulo">Deivy Torres</h1>
+          <p class="hero-rol" data-i18n="home.rol">Ingeniero en sistemas</p>
+
+          <div class="hero-main">
+            <img class="hero-img" src="img/foto-perfil-2.png" alt="Deivy Torres" width="140" height="140">
+
+            <div class="hero-info">
+              <p class="hero-descripcion" data-i18n="home.desc">
+                ¿Tu negocio necesita automatizar procesos o digitalizarse? Te diseño una solución a tu medida, pensada para ahorrarte tiempo y dinero, y para ayudarte a ganar clientes.
+              </p>
+
+              <ul class="project-stack hero-stack">
+                <li>Laravel</li>
+                <li>Tailwind</li>
+                <li>PHP</li>
+                <li>Python</li>
+                <li>MySQL</li>
+                <li>Github</li>
+                <li>CPanel</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#" class="hero-cta">
+              <span data-i18n="home.cta">Enlaces</span>
+              <i class="fi fi-rr-arrow-small-right" aria-hidden="true"></i>
+            </a>
+
+            <ul class="contact-list">
+              <li>
+                <a href="https://github.com/deivystoteles" aria-label="GitHub" target="_blank" rel="noopener">
+                  <i class="fi fi-brands-github" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/deitorres" aria-label="LinkedIn" target="_blank" rel="noopener">
+                  <i class="fi fi-brands-linkedin" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="copy-discord" data-copy="dei_0_0" aria-label="Copiar usuario de Discord" data-i18n="common.copiarDiscord" data-i18n-attr="aria-label">
+                  <i class="fi fi-brands-discord" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="proyectos" class="projects" aria-labelledby="proyectos-titulo">
+        <div class="projects-label">
+          <h2 id="proyectos-titulo" data-i18n="nav.proyectos">Proyectos</h2>
+        </div>
+
+        <ul class="projects-grid">
+          <li class="project-card">
+            <a href="proyectos/edureg.html" class="project-card-link">
+              <article>
+                <h3>EduReg</h3>
+                <p data-i18n="home.edureg.desc">Sistema de gestión escolar con matrículas, pagos por cuotas y control financiero por dashboard.</p>
+                <div class="project-meta">
+                  <ul class="project-stack">
+                    <li>Laravel</li>
+                    <li>Tailwind</li>
+                    <li>SweetAlert</li>
+                    <li>Datatables</li>
+                  </ul>
+                  <span class="project-link">
+                    <span data-i18n="common.verDetalle">Ver detalle</span>
+                    <i class="fi fi-rr-arrow-small-right" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </article>
+            </a>
+          </li>
+
+          <li class="project-card">
+            <a href="proyectos/secondbrain.html" class="project-card-link">
+              <article>
+                <h3>SecondBrainCore</h3>
+                <p data-i18n="home.secondbrain.desc">Gestor personal de conocimiento con notas en Markdown, temas y analítica de productividad.</p>
+                <div class="project-meta">
+                  <ul class="project-stack">
+                    <li>Python</li>
+                    <li>Tkinter</li>
+                    <li>SQLAlchemy</li>
+                    <li>SQLite</li>
+                  </ul>
+                  <span class="project-link">
+                    <span data-i18n="common.verDetalle">Ver detalle</span>
+                    <i class="fi fi-rr-arrow-small-right" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </article>
+            </a>
+          </li>
+          
+          <li class="project-card">
+            <a href="proyectos/plangym.html" class="project-card-link">
+              <article>
+                <h3>PlanGym</h3>
+                <p data-i18n="home.plangym.desc">Sistema de gestión de membresías para gimnasios con control de socios, pagos y asistencia por QR.</p>
+                <div class="project-meta">
+                  <ul class="project-stack">
+                    <li>PHP</li>
+                    <li>MySQL</li>
+                    <li>Bootstrap</li>
+                    <li>SweetAlert</li>
+                    <li>DataTables</li>
+                  </ul>
+                  <span class="project-link">
+                    <span data-i18n="common.verDetalle">Ver detalle</span>
+                    <i class="fi fi-rr-arrow-small-right" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </article>
+            </a>
+          </li>
+
+          <li class="project-card">
+            <a href="proyectos/helpdesk.html" class="project-card-link">
+              <article>
+                <h3>Helpdeskx</h3>
+                <p data-i18n="home.helpdesk.desc">Plataforma de tickets de soporte técnico con roles, historial de auditoría y reportes de desempeño.</p>
+                <div class="project-meta">
+                  <ul class="project-stack">
+                    <li>PHP</li>
+                    <li>MySQL</li>
+                    <li>Bootstrap</li>
+                    <li>SweetAlert</li>
+                    <li>DataTables</li>
+                  </ul>
+                  <span class="project-link">
+                    <span data-i18n="common.verDetalle">Ver detalle</span>
+                    <i class="fi fi-rr-arrow-small-right" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </article>
+            </a>
+          </li>
+
+          <li class="project-card">
+            <a href="proyectos/preguntario.html" class="project-card-link">
+              <article>
+                <h3>Preguntario</h3>
+                <p data-i18n="home.preguntario.desc">Sistema de encuestas con creación de cuestionarios, asignación a evaluados y resultados automáticos.</p>
+                <div class="project-meta">
+                  <ul class="project-stack">
+                    <li>PHP</li>
+                    <li>MySQL</li>
+                    <li>Bootstrap</li>
+                    <li>SweetAlert</li>
+                    <li>DataTables</li>
+                  </ul>
+                  <span class="project-link">
+                    <span data-i18n="common.verDetalle">Ver detalle</span>
+                    <i class="fi fi-rr-arrow-small-right" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </article>
+            </a>
+          </li>
+
+          <li class="project-card">
+            <a href="proyectos/agendatucita.html" class="project-card-link">
+              <article>
+                <h3>AgendaTuCita</h3>
+                <p data-i18n="home.agendatucita.desc">Sistema de citas médicas con generación automática de horarios disponibles y confirmación en tiempo real.</p>
+                <div class="project-meta">
+                  <ul class="project-stack">
+                    <li>PHP</li>
+                    <li>MySQL</li>
+                    <li>Bootstrap</li>
+                    <li>SweetAlert</li>
+                    <li>DataTables</li>
+                  </ul>
+                  <span class="project-link">
+                    <span data-i18n="common.verDetalle">Ver detalle</span>
+                    <i class="fi fi-rr-arrow-small-right" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </article>
+            </a>
+          </li>
+
+          <li class="project-card">
+            <a href="proyectos/dermasure.html" class="project-card-link">
+              <article>
+                <h3>Dermasure</h3>
+                <p data-i18n="home.dermasure.desc">Apoyo diagnóstico con IA para detección de Carcinoma Basocelular, con estimación de incertidumbre.</p>
+                <div class="project-meta">
+                  <ul class="project-stack">
+                    <li>PHP</li>
+                    <li>MySQL</li>
+                    <li>Bootstrap</li>
+                    <li>SweetAlert</li>
+                    <li>DataTables</li>
+                  </ul>
+                  <span class="project-link">
+                    <span data-i18n="common.verDetalle">Ver detalle</span>
+                    <i class="fi fi-rr-arrow-small-right" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </article>
+            </a>
+          </li>
+
+          <li class="project-card">
+            <a href="proyectos/asistenciax.html" class="project-card-link">
+              <article>
+                <h3>AsistenciaX</h3>
+                <p data-i18n="home.asistenciax.desc">Control de asistencia laboral con horarios, breaks y validaciones automáticas por área.</p>
+                <div class="project-meta">
+                  <ul class="project-stack">
+                    <li>PHP</li>
+                    <li>MySQL</li>
+                    <li>Bootstrap</li>
+                    <li>SweetAlert</li>
+                    <li>DataTables</li>
+                  </ul>
+                  <span class="project-link">
+                    <span data-i18n="common.verDetalle">Ver detalle</span>
+                    <i class="fi fi-rr-arrow-small-right" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </article>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section id="educacion" class="projects" aria-labelledby="proyectos-titulo">
+        <div class="projects-label">
+          <h2 id="proyectos-titulo" data-i18n="nav.educacion">Educación</h2>
+        </div>
+
+        <ul class="projects-grid">
+          <li class="project-card">
+            <article>
+              <div class="titulo-fecha">
+                <h3 data-i18n="home.edu.carrera">Ingeniería en sistemas</h3>
+                <span class="curso-tiempo">2024 - 2029</span>
+              </div>
+              <p data-i18n="home.edu.universidad">Universidad Privada San Juan Bautista</p>
+            </article>
+          </li>
+        </ul>
+      </section>
+
+    </main>
+
+    <footer class="site-footer" id="contacto">
+      <div class="footer-content">
+        <h2 data-i18n="nav.contacto">Contacto</h2>
+
+        <ul class="footer-list">
+          <li class="footer-item">
+            <a href="https://linkedin.com/in/deitorres" target="_blank" rel="noopener">
+              <i class="fi fi-brands-linkedin" aria-hidden="true"></i>
+              <span class="footer-item-label">LinkedIn</span>
+            </a>
+          </li>
+
+          <li class="footer-item">
+            <a href="mailto:deivyjth@gmail.com">
+              <i class="fi fi-rr-envelope" aria-hidden="true"></i>
+              <span class="footer-item-label">Gmail</span>
+            </a>
+          </li>
+
+          <li class="footer-item">
+            <a href="#" class="copy-discord" data-copy="dei_0_0">
+              <i class="fi fi-brands-discord" aria-hidden="true"></i>
+              <span class="footer-item-label">Discord</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script>
+      document.querySelectorAll('.copy-discord').forEach(function (el) {
+        el.addEventListener('click', function (e) {
+          e.preventDefault();
+          const texto = this.dataset.copy;
+          navigator.clipboard.writeText(texto).then(() => {
+            this.classList.add('copiado');
+            setTimeout(() => {
+              this.classList.remove('copiado');
+            }, 1500);
+          }).catch(err => {
+            console.error('No se pudo copiar: ', err);
+          });
+        });
+      });
+    </script>
+
+</body>
+</html>
